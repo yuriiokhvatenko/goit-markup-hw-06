@@ -747,6 +747,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 }
 
 .modal {
+  padding: 40px;
   position: absolute;
   width: 528px;
   height: 581px;
@@ -769,4 +770,23 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.modal-descr {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.modal-form-block {
+  width: 100%;
+}
+
+.input-modal {
+  height: 40px;
 }
