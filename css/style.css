@@ -16,6 +16,7 @@
   --primary-font: "Roboto", sans-serif;
   --primary-ttf: cubic-bezier(0.4, 0, 0.2, 1);
   --primary-duration: 250ms;
+  --primary-trans: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* General styles */
@@ -630,6 +631,7 @@ margin-bottom: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .icon-send {
@@ -858,6 +860,7 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
   transition: border-color var(--primary-duration) var(--primary-ttf);
 }
 
@@ -884,6 +887,8 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  cursor: pointer;
+
   transition: border-color var(--primary-duration) var(--primary-ttf);
 }
 .textarea-field:focus {
@@ -897,28 +902,37 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
   align-items: center;
 }
 
+.checbox-label{
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
 .checkbox {
   appearance: none;
+  cursor: pointer;
 }
 
-.checkbox-custom {
-  display:inline-block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--primary-text-color);
-  border-radius: 4px;
-  background-size: 0;
-  transition: background-size var(--primary-duration) var(--primary-ttf);
+.checbox-icon {
+  margin-right: 7px;
+  cursor: pointer;
+}
+.checbox-icon .icon-unchecked {
+  opacity: 1;
+  transition: var(--primary-trans);
 }
 
-.checkbox:checked +.checkbox-custom {
-background-image: url(../images/iconcheck.svg);
-background-repeat: no-repeat;
-background-size: 15px;
-background-position: center;
-border: transparent;
+.checkbox:checked +.checbox-icon .icon-unchecked {
+  opacity: 0;
 }
 
+.checbox-icon .icon-checked {
+  opacity: 0;
+  transition: var(--primary-trans);
+}
+.checkbox:checked +.checbox-icon .icon-checked {
+  opacity: 1;
+}
 
 .descr-agreement {
   font-weight: 400;
