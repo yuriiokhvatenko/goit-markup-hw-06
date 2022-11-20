@@ -86,7 +86,7 @@ a {
   
 }
 /* Header */
-/* Logo */
+/* Logo  start*/
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -108,12 +108,13 @@ a {
   margin-right: 93px;
 }
 
-.logo-first-header {
+.logo--blue {
   color: var(--accent-color);
 }
-.logo-last-header {
+.logo--black {
   color: var(--primary-text-color);
 }
+/* Logo end */
 
 /* Header navigation */
 .nav-list {
